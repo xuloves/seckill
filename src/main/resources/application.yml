@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql:///seckill?serverTimezone=UTC
+  redis:
+    port: 6379
+    host: 172.16.248.120
+  rabbitmq:
+    host: 172.16.248.120
+    port: 5672
+    virtual-host: /
+    listener:
+      simple:
+        acknowledge-mode: manual
+      direct:
+        acknowledge-mode: manual
+    publisher-returns: true
+    publisher-confirms: true
+
